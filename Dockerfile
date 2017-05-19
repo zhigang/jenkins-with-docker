@@ -4,9 +4,10 @@ FROM jenkins:2.46.2
 USER root
 
 # install docker
-COPY cmd/docker-engine-install.sh /usr/local/bin/
+#COPY cmd/docker-engine-install.sh /usr/local/bin/
 
-RUN /usr/local/bin/docker-engine-install.sh
+#RUN /usr/local/bin/docker-engine-install.sh
+RUN apt-get update
 
 # install etc
 RUN apt-get update && apt-get install -y libsystemd-journal0 jq

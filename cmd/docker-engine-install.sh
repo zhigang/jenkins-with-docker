@@ -7,7 +7,7 @@ echo -e "\n 1.Install packages to allow apt to use a repository over HTTPS:"
 
 apt-get update &> /dev/null
 
-apt-get install \
+apt-get install -y \
      apt-transport-https \
      ca-certificates \
      curl \
@@ -27,7 +27,7 @@ echo -e "\n 4.Install CS Docker Engine:"
 apt-get update &> /dev/null
 
 echo -e "\n Execute install docker"
-apt-get install docker-ce
+apt-get install -y docker-ce
 
 echo -e "\n Execute install docker-compose"
 curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
