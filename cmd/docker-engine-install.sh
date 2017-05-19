@@ -14,10 +14,10 @@ apt-get install -y --no-install-recommends \
     curl \
     software-properties-common
 
-echo -e "\n Optionally, install additional kernel modules to add AUFS support."
-apt-get install -y --no-install-recommends \
-    linux-image-extra-$(uname -r) \
-    linux-image-extra-virtual
+#echo -e "\n Optionally, install additional kernel modules to add AUFS support."
+#apt-get install -y --no-install-recommends \
+#    linux-image-extra-$(uname -r) \
+#    linux-image-extra-virtual
 
 echo -e "\n 2.Download and import Docker’s public key for CS packages:"
 curl -fsSL 'https://sks-keyservers.net/pks/lookup?op=get&search=0xee6d536cf7dc86e2d7d56f59a178ac6c6238f52e' |
