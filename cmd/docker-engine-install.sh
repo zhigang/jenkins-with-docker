@@ -32,21 +32,12 @@ add-apt-repository \
 echo -e "\n 4.Install CS Docker Engine:"
 apt-get update &> /dev/null
 
-until dpkg -l | grep "docker-engine" &> /dev/null
-do
-  echo -e "\n Execute install docker"
-
+echo -e "\n Execute install docker"
 apt-get install -y docker-engine
-done
 
-until [ -f "/usr/local/bin/docker-compose" ];
-do
-  echo -e "\n Execute install docker-compose"
-
+echo -e "\n Execute install docker-compose"
 curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
 chmod +x /usr/local/bin/docker-compose
-done
 
 echo -e "\n Show docker and docker-compose version: "
 docker -v
