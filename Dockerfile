@@ -1,15 +1,14 @@
 
-FROM jenkins:2.60.3
+FROM jenkinsci/jenkins:2.107.2
+
+LABEL MAINTAINER siriuszg <zhigang52110@sina.com>
 
 USER root
 
 # install docker
-COPY cmd/docker-engine-install.sh /usr/local/bin/
+COPY cmd/docker-install.sh /usr/local/bin/
 
-RUN /usr/local/bin/docker-engine-install.sh
-
-# install etc
-RUN apt-get update && apt-get install -y libsystemd-journal0 jq
+RUN /usr/local/bin/docker-install.sh
 
 COPY env/plugins.txt /usr/share/jenkins/ref/
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
