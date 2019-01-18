@@ -9,6 +9,7 @@ Install docker ce in jenkins for shell.
 ## Docker Tag
 
 * 2.107.2
+* 2.150.1
 
 ## Build docker image
 
