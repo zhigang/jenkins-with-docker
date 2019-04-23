@@ -1,5 +1,5 @@
 
-FROM jenkinsci/jenkins:2.150.1
+FROM jenkins/jenkins:2.174
 
 LABEL MAINTAINER siriuszg <zhigang52110@sina.com>
 
