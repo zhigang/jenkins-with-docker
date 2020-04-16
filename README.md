@@ -9,6 +9,7 @@ Install docker ce in jenkins for shell.
 ## Docker Tag
 
 * lts
+* 2.231
 * 2.224
 * 2.219
 * 2.214
