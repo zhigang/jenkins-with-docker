@@ -1,14 +1,16 @@
 
-FROM jenkins/jenkins:2.231
+FROM jenkins/jenkins:lts
 
 LABEL MAINTAINER siriuszg <zhigang52110@sina.com>
 
 USER root
 
-# install docker
-COPY cmd/docker-install.sh /usr/local/bin/
+COPY cmd/docker-install.sh /etc/jenkins/
 
-RUN /usr/local/bin/docker-install.sh
+RUN /etc/jenkins/docker-install.sh
 
-COPY env/plugins.txt /usr/share/jenkins/ref/
-RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
+COPY plugins.txt /etc/jenkins/
+
+RUN /usr/local/bin/install-plugins.sh $(cat /etc/jenkins/plugins.txt | tr '\n' ' ')
+
+RUN rm -rf /etc/jenkins
