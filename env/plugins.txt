@@ -1,9 +1,7 @@
-analysis-collector:latest
 ansicolor:latest
 bitbucket:latest
 build-name-setter:latest
 build-with-parameters:latest
-checkstyle:latest
 description-setter:latest
 disable-failed-job:latest
 git:latest
@@ -17,15 +15,11 @@ maven-plugin:latest
 matrix-project:latest
 run-condition:latest
 performance:latest
-pmd:latest
-analysis-core:latest
 rebuild:latest
 scm-api:latest
 ssh-credentials:latest
 credentials:latest
-tasks:latest
 view-job-filters:latest
-warnings:latest
 managed-scripts:latest
 config-file-provider:latest
 token-macro:latest
@@ -75,7 +69,6 @@ pipeline-model-declarative-agent:latest
 pipeline-model-definition:latest
 pipeline-stage-tags-metadata:latest
 cloudbees-folder:latest
-ace-editor:latest
 jquery-detached:latest
 durable-task:latest
 support-core:latest
@@ -92,7 +85,6 @@ pipeline-input-step:latest
 sse-gateway:latest
 bouncycastle-api:latest
 pam-auth:latest
-windows-slaves:latest
 ldap:latest
 external-monitor-job:latest
 icon-shim:latest
@@ -101,8 +93,6 @@ build-timeout:latest
 naginator:latest
 pipeline-rest-api:latest
 pipeline-stage-view:latest
-momentjs:latest
-handlebars:latest
 workflow-aggregator:latest
 pipeline-input-step:latest
 pipeline-milestone-step:latest
