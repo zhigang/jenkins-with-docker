@@ -1,5 +1,5 @@
 
-FROM jenkins/jenkins:2.231
+FROM jenkins/jenkins:lts
 
 LABEL MAINTAINER siriuszg <zhigang52110@sina.com>
 
@@ -9,6 +9,8 @@ USER root
 COPY cmd/docker-install.sh /usr/local/bin/
 
 RUN /usr/local/bin/docker-install.sh
+
+RUN rm -rf /usr/local/bin/docker-install.sh
 
 COPY env/plugins.txt /usr/share/jenkins/ref/
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
