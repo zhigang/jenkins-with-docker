@@ -1,5 +1,5 @@
 
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:2.522
 
 LABEL maintainer="siriuszg <zhigang52110@sina.com>"
 
@@ -14,5 +14,4 @@ RUN /usr/local/bin/docker-install.sh
 
 RUN rm -rf /usr/local/bin/docker-install.sh
 
-COPY env/plugins.txt /usr/share/jenkins/ref/
-RUN jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt
+USER jenkins
